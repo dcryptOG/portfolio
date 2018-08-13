@@ -92,21 +92,25 @@ ul li {
 
 /* DROP NAV SECTION************** */
 
-.mobileDrop {
-    display: none;
+.mobileDropBox {
+    width: 50rem;
+}
+
+* {
+    outline: 2px dashed red;
 }
 
 .topNav {
     width: 100%;
-    justify-content: space-between;
     align-items: center;
     font-size: 2rem; 
     display: inline-flex;
+    justify-content: space-between;
 }
 
 .dropDown {
     position: relative;
-    margin-right: 10%;
+    margin-right: 5rem;
 }
 
 .hoverLink {
@@ -169,6 +173,7 @@ ul li {
     align-items: center;
     background: rgba(192,192,192, 0.5);
     width: 80%;
+    object-fit: fill;
     padding: 2rem;
     border-radius: 1rem;
     border: 0.5em double limegreen;
