@@ -1,0 +1,488 @@
+html {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.5em;
+}
+
+* {
+    outline: 2px dashed red;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/chibg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+
+
+/*==============================TOP DROP NAV BAR========================================================================*/
+
+
+#top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 5px solid black;
+    background: limegreen;
+    flex-flow: row;
+    margin: auto;
+}
+
+.topItems {
+    display: inline-flex;
+    flex-flow: row;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+}
+.title {
+    background: black;
+    color: limegreen;
+    font-size: 4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: inherit;
+    text-align: center; 
+}
+
+.titleBox {
+    background: black;
+    border: 5px double limegreen;
+    padding: 1rem;
+    display: inline-flex;
+}
+
+.topNav {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 25%;
+    font-size: 2rem; 
+    display: inline-flex;
+}
+
+.hoverLink {
+    position: relative;
+    text-align: center;
+    color: black;
+    margin: .5rem;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+}
+
+.hoverLinkBoxOut {
+    width: 100%;
+    margin: auto;
+    display: inline-flex;
+    text-align: left;
+    justify-content: space-between;
+ 
+}
+
+.hoverLinkBoxIn {
+    width: 100%;
+    margin: auto;
+}
+
+
+
+.dropDown {
+    position: absolute;
+    display: none;
+    margin: auto;
+    text-align: center;
+}
+
+.dropDown li {
+    margin: auto;
+}
+
+.hoverLinkBoxOut {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.hoverLinkBoxIn:hover>.hoverLink {
+    background: linear-gradient(to bottom right, black, grey);
+    color: white;
+}
+
+.hoverLinkBoxIn:hover>.dropDown {
+    display: flex;
+    flex-flow: column;
+}
+
+
+.dropItem:hover>.dropLink {
+    background: black;
+    color: white;
+}
+
+.titleBox:hover>.title {
+    background: limegreen;
+    color: black;
+}
+
+.titleBox:hover {
+    border: 5px solid white;
+}
+
+#top:hover {
+    border-bottom: 5px double whitesmoke;
+}
+
+
+
+/**************************************
+CSS BELOW TO MAKE THE NAV HOROZONTAL
+***************************************/
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+/**************************************
+CSS BELOW FOR DECORATION - so you can
+see whats going on a little better
+***************************************/
+
+.dropDown {
+    padding: 0;
+}
+
+.dropItem {
+    border: 0.1vw solid black;
+}
+
+ul {
+    background-color: limegreen;
+}
+
+
+/*  ==============CONTACT FORM================*/
+.content {
+    margin-top: 15rem;
+}
+
+#content {
+    justify-content: center;
+    align-items: center;
+    background: rgba(192,192,192, 0.5);
+    width: 80%;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 0.5em double limegreen;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 0.5rem double limegreen;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: black;
+    font-family: inherit;
+    font-weight: inherit;
+    color: limegreen;
+    padding: 12px 20px;
+    border: 5px double limegreen;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: limegreen;
+    color: black;
+    border: 5pX solid whitesmoke;
+}
+
+/* ==========================================STICKY FOOTER=================================================== */
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    display: flex;
+    flex-shrink: 0;
+    height: 60%;
+    border-top: 10px double black;
+    outline: 1px solid limegreen;
+    background-image: url(../img/footerbg.jpg);
+}
+
+.footNav {
+          align-items: center;
+    justify-content: center;
+      display: flex;
+    flex-flow: column wrap;
+    background: red;
+    margin: auto;
+
+
+
+}
+
+.footLink {
+    
+}
+
+/*================================================================================
+    @media only screen and (max-width : 700px) {
+        .hoverLinkBoxIn:hover>.dropDown {
+            display: inline-flex;
+            flex-flow: column wrap;
+        }
+
+
+
+html {
+    font-size: 1.7vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: whitesmoke;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto 0;
+    justify-content: space-around;
+    text-align: center;
+    align-items: baseline;
+}
+
+/* ===============================TOP NAV BAR============================================== */
+
+/*
+#top {
+    position: fixed;
+    border-bottom: 10px solid black;
+    z-index: -2;
+}
+
+.topTitle {
+    background: black;
+    color: limegreen;
+}
+
+.topTitle a {
+    text-decoration: none;
+    color: whitesmoke;
+    word-break: break-word;
+    border: 2.5vw solid black;
+    font-size: 4vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.topNav {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: right;
+}
+
+ul li {
+    padding: 2vw;
+    border: 0.1vw solid black;
+    background: limegreen;
+    text-align: center;
+}
+
+
+li:hover {
+    background: whitesmoke;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.link:hover .hide {
+    display: block;
+}
+
+a:hover {
+    background-color: whitesmoke;
+}
+
+*/
+
+
+
+
+/* ============================================SNIPPETS========================================================= */
+/*
+html {
+    font-size: 1.7vw;
+    }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: whitesmoke;
+    width: 100%;
+    }
+
+.flex-container {
+   display: flex;
+   flex-flow: row wrap;
+   align-items: center;
+
+    }
+
+
+
+#top {
+    position: fixed;
+    border-bottom: 0.3vw solid black;
+    background: limegreen;
+    width: 100%;
+}
+
+.top {
+    width: 50%;
+}
+
+#top-nav {
+    background: rgba(173, 255, 47);
+    outline: 5px solid red;
+    object-fit: cover;
+}
+
+.top-title {
+    text-decoration: none;
+    color: limegreen;
+    background: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3vw;
+    border: 2vw solid black;
+    display: flex;
+}
+
+.top-nav-link {
+    display: inline-flex;
+    position: relative;
+}
+
+.dropdown {
+    display: flex;
+    flex-flow: column wrap;
+    list-style-type: none;
+    padding: inherit;
+    position: absolute;
+    align-self: auto;
+    font-size: inherit;
+    border: 0.1vw solid black;
+}
+
+ul {
+   list-style: none;
+   padding: 1vw;
+}
+
+ul li {
+    background: limegreen;
+    text-decoration: none;
+    transition-duration: 0.5s; 
+}
+
+ul li a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul li:hover {
+    background-color: whitesmoke;
+    border-right: 0.1vw solid black;
+}
+
+li:hover,
+li:focus-within {
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+li:focus-within a {
+    outline: none;
+}
+
+ul li ul {
+    background: limegreen;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    display: none;
+}
+
+ul li:hover>ul,
+ul li:focus-within>ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-flow: column wrap;
+    object-fit: cover;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+*/
