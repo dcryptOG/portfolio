@@ -4,10 +4,6 @@ html {
     font-size: 0.5em;
 }
 
-* {
-    outline: 2px dashed red;
-}
-
 body {
     width: 100%;
     margin: 0;
@@ -17,7 +13,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
-    
 }
 
 html,
@@ -43,26 +38,27 @@ ul li {
 
 
 
-/*==============================TOP DROP NAV BAR========================================================================*/
+/*==============================TOP SECTION=======================================================================*/
 
+.top {
+    display: flex;
+}
 
 #top {
     position: fixed;
     top: 0;
     width: 100%;
     border-bottom: 5px solid black;
-    background: limegreen;
-    flex-flow: row;
+    background: linear-gradient(to bottom right, forestgreen, limegreen);
+    display: inline-flex;
+    flex-flow: row wrap;
     margin: auto;
+    align-items: center;
+    text-align: center;
 }
 
-.topItems {
-    display: inline-flex;
-    flex-flow: row;
-    margin: auto;
-    width: 100%;
-    align-items: center;
-}
+/* TITLE************* */
+
 .title {
     background: black;
     color: limegreen;
@@ -77,14 +73,40 @@ ul li {
     border: 5px double limegreen;
     padding: 1rem;
     display: inline-flex;
+    flex-flow: row wrap;
+}
+
+
+#titleBox:hover>#title {
+    background: limegreen;
+    color: black;
+}
+
+#titleBox:hover {
+    border: 5px solid white;
+}
+
+#top:hover {
+    border-bottom: 5px double black;
+}
+
+/* DROP NAV SECTION************** */
+
+.mobileDrop {
+    display: none;
 }
 
 .topNav {
     width: 100%;
     justify-content: space-between;
-    margin-left: 25%;
+    align-items: center;
     font-size: 2rem; 
     display: inline-flex;
+}
+
+.dropDown {
+    position: relative;
+    margin-right: 10%;
 }
 
 .hoverLink {
@@ -93,101 +115,48 @@ ul li {
     color: black;
     margin: .5rem;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     width: 100%;
+    text-shadow: 0 0 4px white;
 }
 
-.hoverLinkBoxOut {
-    width: 100%;
-    margin: auto;
-    display: inline-flex;
-    text-align: left;
-    justify-content: space-between;
- 
-}
-
-.hoverLinkBoxIn {
-    width: 100%;
-    margin: auto;
-}
-
-
-
-.dropDown {
+.dropContent {
+    display: flex;
     position: absolute;
     display: none;
     margin: auto;
     text-align: center;
+    background:  linear-gradient(to bottom right, black, grey);
+    padding: 0 2rem;
 }
 
-.dropDown li {
-    margin: auto;
-}
-
-.hoverLinkBoxOut {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.hoverLinkBoxIn:hover>.hoverLink {
+.dropDown:hover>.hoverLink {
     background: linear-gradient(to bottom right, black, grey);
     color: white;
+    border: 5px double black;
+    border-radius: 2px;
 }
 
-.hoverLinkBoxIn:hover>.dropDown {
+.dropDown:hover>.dropContent {
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
 }
 
 
-.dropItem:hover>.dropLink {
+.dropItem:hover {
     background: black;
     color: white;
-}
-
-.titleBox:hover>.title {
-    background: limegreen;
-    color: black;
-}
-
-.titleBox:hover {
-    border: 5px solid white;
-}
-
-#top:hover {
-    border-bottom: 5px double whitesmoke;
-}
-
-
-
-/**************************************
-CSS BELOW TO MAKE THE NAV HOROZONTAL
-***************************************/
-
-nav ul {
-    text-align: center;
-}
-
-nav li {
-    display: inline-block;
-}
-
-/**************************************
-CSS BELOW FOR DECORATION - so you can
-see whats going on a little better
-***************************************/
-
-.dropDown {
-    padding: 0;
+    border: .1vw solid white;
 }
 
 .dropItem {
     border: 0.1vw solid black;
+    padding: 2rem;
+    object-fit: fill;
+    background: limegreen;
 }
 
-ul {
-    background-color: limegreen;
-}
+
 
 
 /*  ==============CONTACT FORM================*/
@@ -203,6 +172,12 @@ ul {
     padding: 2rem;
     border-radius: 1rem;
     border: 0.5em double limegreen;
+}
+
+label {
+    font-size: 2rem;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 input[type=text],
@@ -222,6 +197,7 @@ input[type=submit] {
     background-color: black;
     font-family: inherit;
     font-weight: inherit;
+    font-size: 2rem;
     color: limegreen;
     padding: 12px 20px;
     border: 5px double limegreen;
@@ -244,27 +220,40 @@ input[type=submit]:hover {
 .footer {
     display: flex;
     flex-shrink: 0;
-    height: 60%;
-    border-top: 10px double black;
+    height: 50%;
+    border-top: 5px solid limegreen;
     outline: 1px solid limegreen;
     background-image: url(../img/footerbg.jpg);
 }
 
 .footNav {
-          align-items: center;
+    align-items: center;
+    align-items: space-around;
     justify-content: center;
-      display: flex;
+    display: flex;
     flex-flow: column wrap;
-    background: red;
     margin: auto;
-
-
-
+    text-align: center;
 }
 
 .footLink {
-    
+    font-family: inherit;
+    background: rgba(0, 0,0, 0.5);
+    color: whitesmoke;
+    text-shadow: 0 0 4px limegreen;
+    margin: 0.5rem;  
+    padding: 1rem;
+    font-size: 2rem;
+    border: 5px double black;
+    border-radius: 5px;
 }
+
+.footLink:hover {
+    background: rgba(255, 255,255 , 0.5);
+    color: black;
+}
+
+
 
 /*================================================================================
     @media only screen and (max-width : 700px) {

@@ -14,63 +14,44 @@
 
 <body>
     <section class='top'>
-        <div class='flex-container' id='top'>
-            <span class='topItems'>
-                <span class='titleBox' role='navigation'>
-                    <a class='title' href='index.html'>Geoff</a>
-                    <a class='title' href='index.html'>Dotson</a>
-                </span>
+        <header class='flex-container' id='top'>
+            <nav class='topNav' role='navigation'>
+                <div class='titleBox' role='navigation'>
+                    <a class='title' href='index.html'>Geoff Dotson</a>
+                </div>
 
-                <nav class='topNav' role='navigation'>
-                    <ul class='hoverLinkBoxOut'>
-                        <li class='hoverLinkBoxIn'>
-                            <a href='index.html' class='hoverLink'>About ⯆</a>
-                            <ul class='dropDown'>
-                                <li class='dropItem'>
-                                    <a href='#' class='dropLink'>Project1</a>
-                                </li>
-                                <li class='dropItem'>
-                                    <a href='#' class='dropLink'>Project2</a>
-                                </li>
-                                <li class='dropItem'>
-                                    <a href='#' class='dropLink'>Project3</a>
-                                </li>
-                                <li class='dropItem'>
-                                    <a href='#' class='dropLink'>Project4</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div>
+                    <a class='mobileDrop' href='#'>Mobile Drop</a>
+                </div>
 
-                    <ul class='hoverLinkBoxOut'>
-                        <li class='hoverLinkBoxIn'>
-                            <a href='portfolio.html' class='hoverLink'>Portfolio ⯆</a>
-                            <ul class='dropDown'>
-                                <li class='dropItem'>
-                                    <a href='#' class='dropLink'>Project1</a>
-                                </li>
-                                <li class='dropItem'>
-                                    <a href='#' class='dropLink'>Project2</a>
-                                </li>
-                                <li class='dropItem'>
-                                    <a href='#' class='dropLink'>Project3</a>
-                                </li>
-                                <li class='dropItem'>
-                                    <a href='#' class='dropLink'>Project4</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="dropDown" role='navigation'>
+                    <a href='index.html' class='hoverLink'>About ⯆</a>
+                    <span class="dropContent">
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                    </span>
+                </div>
 
-                    <ul class='hoverLinkBoxOut'>
-                        <li class='hoverLinkBoxIn'>
-                            <a class='hoverLink' href='contact.html'>Contact</a>
-                        </li>
-                    </ul>
+                <div class="dropDown" role='navigation'>
+                    <a href='index.html' class='hoverLink'>Portfolio ⯆</a>
+                    <span class="dropContent">
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                    </span>
+                </div>
 
-                </nav>
-            </span>
-        </div>
+                <div class="dropDown" role='navigation'>
+                    <a href='contact.html' class='hoverLink'>Contact</a>
+                    <span class="dropContent">
+                        <a href='#' class='dropItem'>Text</a>
+                    </span>
+                </div>
+            </nav>
+        </header>
     </section>
 
     <section class='content'>
@@ -79,7 +60,7 @@
                 <label for='fname'>Name</label>
                 <input type='text' id='name' name='name' placeholder='First and Last'>
 
-                <label for='email'>email</label>
+                <label for='email'>Email</label>
                 <input type='text' id='email' name='name' placeholder='email'>
 
                 <label for='subject'>Subject</label>
@@ -96,7 +77,7 @@
         <footer class="footer">
             <nav class='footNav'>
                 <a href='#top' class='footLink'>Back to Top</a>
-                <a href='#' class='footLink'>Copyright</a>
+                <a href='#' class='footLink'>©</a>
             </nav>
         </footer>
     </section>
@@ -141,12 +122,12 @@
             position: relative;
         }
 
-        .dropDown:hover .dropContent {
+        .dropDown:hover .dropItem {
             display: inline-flex;
             flex-flow: column wrap;
         }
 
-        .dropContent {
+        .dropItem {
             display: none;
             text-align: center;
             background: black;
@@ -160,11 +141,11 @@
             background-color: red;
         }
 
-        .dropContent a {
+        .dropItem a {
             padding: 5px;
         }
 
-        .dropContent a:hover {
+        .dropItem a:hover {
             background: green;
         }
 
@@ -189,31 +170,31 @@
             <span class='mobileDrop'>
                 <div class="dropDown">
                     <a href='hoverLink'>Hello</a>
-                    <span class="dropContent">
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
+                    <span class="dropItem">
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
                     </span>
                 </div>
 
                 <div class="dropDown">
                     <a href='hoverLink'>Hello</a>
-                    <span class="dropContent">
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
+                    <span class="dropItem">
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
                     </span>
                 </div>
 
                 <div class="dropDown">
                     <a href='hoverLink'>Hello</a>
-                    <span class="dropContent">
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
-                        <a href='#' class='subHoverLink'>Text</a>
+                    <span class="dropItem">
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
+                        <a href='#' class='dropItem'>Text</a>
                     </span>
                 </div>
 
