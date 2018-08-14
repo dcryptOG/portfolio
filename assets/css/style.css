@@ -1,6 +1,6 @@
 html {
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 0.5em;
 }
 
@@ -63,7 +63,9 @@ ul li {
     background: black;
     color: limegreen;
     font-size: 4rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'IBM Plex Serif', serif;
+    font-style: italic;
+    font-weight: bolder;
     padding: inherit;
     text-align: center; 
 }
@@ -77,12 +79,12 @@ ul li {
 }
 
 
-#titleBox:hover>#title {
+.titleBox:hover>.title {
     background: limegreen;
     color: black;
 }
 
-#titleBox:hover {
+.titleBox:hover {
     border: 5px solid white;
 }
 
@@ -134,7 +136,8 @@ ul li {
     background: linear-gradient(to bottom right, black, grey);
     color: white;
     border: 5px double black;
-    border-radius: 2px;
+    border-radius: 0.5rem;
+    margin: 0;
 }
 
 .dropDown:hover>.dropContent {
@@ -167,13 +170,17 @@ ul li {
 #content {
     justify-content: center;
     align-items: center;
-    background: rgba(192,192,192, 0.5);
+    background: rgba(192,192,192, 0.3);
     width: 80%;
     object-fit: fill;
     padding: 2rem;
     border-radius: 1rem;
-    border: 0.5em double limegreen;
+    -moz-box-shadow: inset 0 0 10px limegreen;
+    -webkit-box-shadow: inset 0 0 10px limegreen;
+    box-shadow: inset 0 0 10px limegreen;
 }
+
+/* ============================CONTACT HTML============================================= */
 
 label {
     font-size: 2rem;
@@ -186,7 +193,7 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 0.5rem double limegreen;
+    border: 0.1rem solid black;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
@@ -201,7 +208,7 @@ input[type=submit] {
     font-size: 2rem;
     color: limegreen;
     padding: 12px 20px;
-    border: 5px double limegreen;
+    border: 5px solid limegreen;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -212,19 +219,57 @@ input[type=submit]:hover {
     border: 5pX solid whitesmoke;
 }
 
+
+/* ====================================PORTFOLIO HTML========================================= */
+
+.workNav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================STICKY FOOTER=================================================== */
 
 .content {
     flex: 1 0 auto;
 }
 
+.footPad {
+    display: felx;
+    background: linear-gradient(black 85%, limegreen);
+    margin-bottom: 0;
+    border: 1px solid black;
+}
+
 .footer {
     display: flex;
     flex-shrink: 0;
     height: 50%;
-    border-top: 5px solid limegreen;
+    border-top: 0.1rem solid limegreen;
     outline: 1px solid limegreen;
     background-image: url(../img/footerbg.jpg);
+    -moz-box-shadow:    inset 0 0 100px black;
+    -webkit-box-shadow: inset 0 0 100px black;
+    box-shadow: inset 0 0 100px black;
 }
 
 .footNav {
@@ -235,18 +280,27 @@ input[type=submit]:hover {
     flex-flow: column wrap;
     margin: auto;
     text-align: center;
+
+}
+
+.footLink:nth-child(2){
+    border-radius: 50%;
+    font-size: 2.5rem;
 }
 
 .footLink {
     font-family: inherit;
-    background: rgba(0, 0,0, 0.5);
+    background: rgba(0, 0,0, 0.6);
     color: whitesmoke;
     text-shadow: 0 0 4px limegreen;
     margin: 0.5rem;  
     padding: 1rem;
     font-size: 2rem;
-    border: 5px double black;
-    border-radius: 5px;
+    border: 0.1rem solid black;
+    border-radius: 0.1rem;
+    -moz-box-shadow:    inset 0 0 5px limegreen;
+    -webkit-box-shadow: inset 0 0 5px limegreen;
+    box-shadow: inset 0 0 5px limegreen;
 }
 
 .footLink:hover {
