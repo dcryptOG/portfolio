@@ -96,10 +96,6 @@ ul li {
     width: 50rem;
 }
 
-* {
-    outline: 2px dashed red;
-}
-
 .topNav {
     width: 100%;
     align-items: center;
