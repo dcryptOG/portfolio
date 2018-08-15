@@ -32,12 +32,6 @@ a {
     color: black;
 }
 
-ul li {
-    list-style-type: none;
-}
-
-
-
 /*==============================TOP SECTION=======================================================================*/
 
 .top {
@@ -160,9 +154,7 @@ ul li {
 }
 
 
-
-
-/*  ==============CONTACT FORM================*/
+/*  =============================CONTNET MISC==============================================*/
 .content {
     margin-top: 15rem;
 }
@@ -178,6 +170,59 @@ ul li {
     -moz-box-shadow: inset 0 0 10px limegreen;
     -webkit-box-shadow: inset 0 0 10px limegreen;
     box-shadow: inset 0 0 10px limegreen;
+}
+
+
+/* =============================================INDEX HTML========================================================== */
+
+.aboutContainer {
+    display: flex;
+    flex-flow: column wrap;
+    word-break: break-word;
+}
+
+.aboutTitleBox {
+    background: linear-gradient(to bottom right, forestgreen, limegreen);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+#coverLetter {
+    display: inline-flex;
+}
+
+#qualify {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.qualifyTitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+    padding: 0;
+    top: 0;
+    text-shadow: 0 0 0.5px limegreen;
+    font-size: 2rem;
+    flex-grow: stretch;
+}
+
+.qualifyBox {
+    background: rgba(245, 245, 245, 0.8);
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    padding: 0rem 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.qualifyItem {
+    list-style: none;
+    text-align: left;
+    height: 100%;
+    width: 100%;
 }
 
 /* ============================CONTACT HTML============================================= */
@@ -226,25 +271,32 @@ input[type=submit]:hover {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+
 }
 
+.workBox {
+    border: 1rem solid black;
+    outline: .1rem solid limegreen;
+    padding: 0.1rem;
+    margin: 0.5rem;
+    background: linear-gradient(to bottom right, forestgreen, limegreen);    
+}
 
+.workBox:hover {
+    background: white;
+    -moz-box-shadow:    inset 0 0 50px limegreen;
+    -webkit-box-shadow: inset 0 0 50px limegreen;
+    box-shadow: inset 0 0 50px limegreen;
+}
 
+.workBox:hover>h2 {
+    color: white;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.workTitle {
+    font-family: 'IBM Plex serif', serif;
+    font-size: 2rem;
+}
 
 
 /* ==========================================STICKY FOOTER=================================================== */
@@ -280,7 +332,6 @@ input[type=submit]:hover {
     flex-flow: column wrap;
     margin: auto;
     text-align: center;
-
 }
 
 .footLink:nth-child(2){
