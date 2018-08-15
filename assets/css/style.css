@@ -218,11 +218,13 @@ a {
     align-items: center;
 }
 
-.qualifyItem {
-    list-style: none;
-    text-align: left;
+.qualifyContent {
     height: 100%;
     width: 100%;
+}
+
+.qualifyItem p {
+    text-align: left;
 }
 
 /* ============================CONTACT HTML============================================= */
