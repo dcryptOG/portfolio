@@ -13,6 +13,16 @@
 </head>
 
 <body>
+
+    <style>
+        /* .dropDown {
+            display: none;
+        }
+
+        .mobileDropBox:hover .dropDown {
+           display: flex;
+        } */
+    </style>
     <section class='top'>
         <header class='flex-container' id='top'>
             <nav class='topNav' role='navigation'>
@@ -20,9 +30,46 @@
                     <a class='title' href='index.html'>Geoff Dotson</a>
                 </div>
 
-                <div class='mobileDropBox'>
-                    <a class='mobileDrop' href='#'>Mobile Drop</a>
-                </div>
+                <nav class='mobileDropBox'>
+                    <a class='mobileDrop' href='#' id='menuIcon'>
+                        <div class='menuIconHam'>
+                        </div>
+                        <div class='menuIconHam'>
+                        </div>
+                        <div class='menuIconHam'>
+                        </div>
+                    </a>
+                    <div class='mobileDropContent'>
+                        <span class='mobileDropItem'>
+                            <a class='mobileDropLink' href="">About ⯈</a>
+                            <div class='mobileDropSubItem'>
+                                <a href="#">2</a>
+                                <a href="#">2</a>
+                                <a href="#">2</a>
+                            </div>
+                        </span>
+                        <div class='mobileDropItem'>
+                            <a class='mobileDropLink' href="">Portfolio ⯈</a>
+                            <div class='mobileDropSubItem'>
+                                <a href="#">3</a>
+                                <a href="#">3</a>
+                                <a href="#">3</a>
+                            </div>
+                        </div>
+                        <div class='mobileDropItem'>
+                            <a class='mobileDropLink' href="">Portfolio ⯈</a>
+                            <div class='mobileDropSubItem'>
+                                <a href="#">2</a>
+                            </div>
+                        </div>
+                        <span class='mobileDropItem'>
+                            <a class='mobileDropLink' href="#">Portfolio ⯈</a>
+                            <div class='mobileDropSubItem'>
+                                <a href="#">.</a>
+                            </div>
+                        </span>
+                    </div>
+                </nav>
 
                 <div class="dropDown" role='navigation'>
                     <a href='index.html' class='hoverLink'>About ⯆</a>
@@ -67,12 +114,10 @@
                         <picture>
                             <img src='assets/img/profile.png'>
                         </picture>
-                        <p>
-                            BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH
-                            BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH
-                            BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH
-                            BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH
-                            BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH BLAHHHHHHHHHH
+                        <p class- 'test'>
+                            main > section.posts > img{ outline: 1px solid red; width: 22vw; min-height: 100vh; margin: 0; padding: 0; flex-grow: 1;
+                            overflow: hidden; box-sizing: border-box; } main > section.posts > img{ /* Our suspect */ object-fit:
+                            cover; } http://jsfiddle.net/o2fx87ws/
                         </p>
                     </article>
                 </div>
@@ -114,17 +159,16 @@
                     </div>
 
                     <div class='qualifyBox'>
-                        <div class='qualifyContent'>
-                            <h5>Work History</h5>
-                            <a href='#workHistory' id='workHistory'></a>
-                            <div class='qualifyItem'>
-                                <h6>Network Management</h6>
-                                </a>
-                                <p>thing</p>
-                                <p>thing</p>
-                                <p>thing</p>
-                                <p>thing</p>
-                            </div>
+
+                        <h5>Work History</h5>
+                        <a href='#workHistory' id='workHistory'></a>
+                        <div class='qualifyItem'>
+                            <h6>Network Management</h6>
+                            </a>
+                            <p>thing</p>
+                            <p>thing</p>
+                            <p>thing</p>
+                            <p>thing</p>
                         </div>
                     </div>
                 </div>

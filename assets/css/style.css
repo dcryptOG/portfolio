@@ -4,6 +4,10 @@ html {
     font-size: 0.5em;
 }
 
+* {
+    outline: 1px dashed red;
+}
+
 body {
     width: 100%;
     margin: 0;
@@ -51,7 +55,7 @@ a {
     text-align: center;
 }
 
-/* TITLE************* */
+/* TITLE************************************************************************** */
 
 .title {
     background: black;
@@ -83,10 +87,88 @@ a {
 }
 
 #top:hover {
-    border-bottom: 5px double black;
+/*   add animations rahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
 }
 
-/* DROP NAV SECTION************** */
+/* MOBILE NAV***************************************************************************************** */
+/* viewpot 440 or 450 QUERIES========= */
+.menuIconHam {
+    display: flex;
+    flex-flow: column wrap;
+    background: black;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+    margin: 0.5rem;
+    align-self: auto;
+    width: 25%;
+    margin-left: 25%;
+}
+
+/* ==============================Mobile NAV================================== */
+
+.mobileDropBox {
+    position: relative;            
+    width: 60vw;
+}
+
+.mobileDrop {
+    width: 60vw;
+    position: relative;
+    color: black;
+    display: flex;
+    flex-flow: column wrap;
+    text-shadow: 0 0 4px white;
+    justify-content: center;
+
+}
+
+.mobileDropContent {
+    display: none;
+    flex-flow: column wrap;
+    text-align: center;
+    position: absolute;
+    margin-left: 15vw;
+    text-align: center;
+    
+}
+
+.mobileDropSubItem {
+    display: none;
+    flex-flow: column wrap;
+    position: absolute;
+    margin-left: 30vw;
+    background: limegreen;
+    text-align: center;
+    word-break: break-all;
+}
+
+.mobileDropSubItem a:hover {
+   background: white;
+}
+
+.mobileDropItem {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: white;
+    justify-content: space-around;
+
+}
+
+.mobileDropItem a {
+    word-break: break-all;
+    background: green;
+    width: 15vw;
+}
+
+.mobileDropBox:hover>.mobileDropContent {
+    display: flex;
+}
+
+.mobileDropItem:hover>.mobileDropSubItem {
+    display: inline-flex;
+}
+
+/* DROP NAV*************************************************************************** */
 
 .mobileDropBox {
     width: 50rem;
@@ -195,7 +277,7 @@ a {
 #qualify {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .qualifyTitle {
