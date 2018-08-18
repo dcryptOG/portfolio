@@ -4,9 +4,7 @@ html {
     font-size: 0.5em;
 }
 
-* {
-    outline: 1px dashed red;
-}
+
 
 body {
     width: 100%;
@@ -101,14 +99,16 @@ a {
     margin: 0.5rem;
     align-self: auto;
     width: 25%;
-    margin-left: 25%;
+    position: relative;
 }
 
 /* ==============================Mobile NAV================================== */
 
 .mobileDropBox {
+    /* display: none; */
     position: relative;            
-    width: 60vw;
+    width: 80%;
+    display: block;
 }
 
 .mobileDrop {
@@ -119,7 +119,7 @@ a {
     flex-flow: column wrap;
     text-shadow: 0 0 4px white;
     justify-content: center;
-
+    align-self: center;
 }
 
 .mobileDropContent {
@@ -127,8 +127,9 @@ a {
     flex-flow: column wrap;
     text-align: center;
     position: absolute;
-    margin-left: 15vw;
-    text-align: center;
+    text-align: center; 
+    margin-top: 4.5vw;
+    margin: 0;
     
 }
 
@@ -136,14 +137,19 @@ a {
     display: none;
     flex-flow: column wrap;
     position: absolute;
+    margin-top: 0;
     margin-left: 30vw;
     background: limegreen;
     text-align: center;
     word-break: break-all;
 }
 
-.mobileDropSubItem a:hover {
-   background: white;
+.mobileDropSubItem a {
+    padding: 0.1em;
+}
+
+.mobileDropSubItem:hover a {
+   color: black;
 }
 
 .mobileDropItem {
@@ -151,13 +157,14 @@ a {
     flex-flow: row wrap;
     background: white;
     justify-content: space-around;
-
+        background: limegreen;
 }
 
 .mobileDropItem a {
     word-break: break-all;
-    background: green;
+    background: limegreen;
     width: 15vw;
+    border: 0.1rem solid black;
 }
 
 .mobileDropBox:hover>.mobileDropContent {
@@ -168,9 +175,19 @@ a {
     display: inline-flex;
 }
 
+.mobileDropItem a:hover{
+    color: white;
+    background: black;
+}
+
+.mobileDropSubItem a:hover {
+    background: black;
+    color: white;
+}
+
 /* DROP NAV*************************************************************************** */
 
-.mobileDropBox {
+.navPad {
     width: 50rem;
 }
 
@@ -185,6 +202,7 @@ a {
 .dropDown {
     position: relative;
     margin-right: 5rem;
+    display: none;
 }
 
 .hoverLink {
@@ -274,10 +292,23 @@ a {
     display: inline-flex;
 }
 
+picture img {
+          outline: 1px solid red;
+    	width: 20vw;
+    	min-height: 20vh;
+    	margin: 0; padding: 0;
+    	flex-grow: 1;
+    	overflow: hidden;
+    	box-sizing: border-box;
+        object-fit: contain;
+        outline: 5px solid red;
+}
+
 #qualify {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    
 }
 
 .qualifyTitle {
@@ -298,6 +329,10 @@ a {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    flex-grow: 1;
+    	box-sizing: border-box;
+        object-fit: contain;
+    margin: 1rem;
 }
 
 .qualifyContent {
