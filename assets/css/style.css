@@ -5,6 +5,9 @@ html {
 }
 
 
+* {
+    outline: 1px dashed red;
+}
 
 body {
     width: 100%;
@@ -90,15 +93,19 @@ a {
 
 /* MOBILE NAV***************************************************************************************** */
 /* viewpot 440 or 450 QUERIES========= */
+.mobileNavPad {
+    width: 10rem;
+}
+
 .menuIconHam {
     display: flex;
     flex-flow: column wrap;
     background: black;
     border-radius: 0.5rem;
     height: 0.5rem;
-    margin: 0.5rem;
+    margin-top: 1rem;
     align-self: auto;
-    width: 25%;
+    width: 100%;
     position: relative;
 }
 
@@ -107,49 +114,40 @@ a {
 .mobileDropBox {
     /* display: none; */
     position: relative;            
-    width: 80%;
-    display: block;
+    width: 100%;
+    display: 0 1 flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobileDropBox:hover .menuIconHam {
+    background: white;
+}
+
+.mobileDropBox:hover>.mobileDropContent {
+    display: flex;
+    border: 0.1rem solid black;
+    border-radius: 0.5vw;
+    margin: auto;
 }
 
 .mobileDrop {
-    width: 60vw;
+    width: 100%;;
     position: relative;
     color: black;
-    display: flex;
-    flex-flow: column wrap;
-    text-shadow: 0 0 4px white;
-    justify-content: center;
-    align-self: center;
+    display: 0 1 flex;
+    flex-flow: column;
 }
 
 .mobileDropContent {
+    width: inherit;
     display: none;
     flex-flow: column wrap;
     text-align: center;
     position: absolute;
     text-align: center; 
-    margin-top: 4.5vw;
-    margin: 0;
-    
-}
-
-.mobileDropSubItem {
-    display: none;
-    flex-flow: column wrap;
-    position: absolute;
-    margin-top: 0;
-    margin-left: 30vw;
-    background: limegreen;
-    text-align: center;
-    word-break: break-all;
-}
-
-.mobileDropSubItem a {
-    padding: 0.1em;
-}
-
-.mobileDropSubItem:hover a {
-   color: black;
+    justify-content: center;
 }
 
 .mobileDropItem {
@@ -157,22 +155,35 @@ a {
     flex-flow: row wrap;
     background: white;
     justify-content: space-around;
-        background: limegreen;
+    background:  linear-gradient(to bottom right, black, grey);
 }
 
 .mobileDropItem a {
     word-break: break-all;
     background: limegreen;
     width: 15vw;
-    border: 0.1rem solid black;
+    padding: 0.1vw;
 }
 
-.mobileDropBox:hover>.mobileDropContent {
-    display: flex;
+.mobileDropSubItem {
+    display: none;
+    flex-flow: column wrap;
+    position: absolute;
+    margin-top: auto;
+    margin-left: 30.8vw;
+    background: limegreen;
+    text-align: center;
+    border: 0.1em solid black;
 }
 
 .mobileDropItem:hover>.mobileDropSubItem {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;  
+}
+
+.mobileDropItem:hover>.mobileDropSubItem a {
+    padding: 0.1em;
+    margin: 0;
 }
 
 .mobileDropItem a:hover{
@@ -180,9 +191,14 @@ a {
     background: black;
 }
 
+.mobileDropSubItem:hover a {
+   color: black;
+}
+
 .mobileDropSubItem a:hover {
     background: black;
     color: white;
+ 
 }
 
 /* DROP NAV*************************************************************************** */
