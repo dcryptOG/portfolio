@@ -224,12 +224,13 @@ a {
 .dropDown {
     position: relative;
     margin-right: 5rem;
-    display: flex;
+    display: block;
 }
 
 @media screen and (max-width: 450px) and (max-width: 3000px) {
   .dropDown { display: none; }
 }
+
 
 .hoverLink {
     position: relative;
