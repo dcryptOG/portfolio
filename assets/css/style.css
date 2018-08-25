@@ -93,6 +93,13 @@ a {
 
 /* MOBILE NAV***************************************************************************************** */
 /* viewpot 440 or 450 QUERIES========= */
+
+@media only screen and (min-width: 450px) {
+    .mobileDropBox {
+        display: none;
+    }
+}
+
 .mobileNavPad {
     width: 10rem;
 }
@@ -112,14 +119,13 @@ a {
 /* ==============================Mobile NAV================================== */
 
 .mobileDropBox {
-    /* display: none; */
-    position: relative;            
-    width: 100%;
-    display: 0 1 flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-}
+        position: relative;            
+        width: 100%;
+        display: 0 1 flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
 
 .mobileDropBox:hover .menuIconHam {
     background: white;
@@ -218,7 +224,11 @@ a {
 .dropDown {
     position: relative;
     margin-right: 5rem;
-    display: none;
+    display: flex;
+}
+
+@media screen and (max-width: 450px) and (max-width: 3000px) {
+  .dropDown { display: none; }
 }
 
 .hoverLink {
